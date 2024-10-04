@@ -15,6 +15,7 @@
 // }
 
 import  { useState, useEffect } from 'react';
+import {VscAccount} from'react-icons/vsc'
 
 export const ButtonApi = ({ users }) => {
   const [data, setData] = useState([]);
@@ -52,8 +53,16 @@ export const ButtonApi = ({ users }) => {
           <li key={user.id}>{user.name}</li>
           ))}
       </ul>
-          <button onClick={fetchUsers}>Send</button>
-          <button onClick={clearUsers}>Borrar</button>
+          <button
+           onClick={fetchUsers}>
+             <VscAccount className='btnVsc'/>
+            Obtener
+          </button>
+          <button
+           onClick={clearUsers}>
+          <VscAccount className='btnVsc'/>
+           Borrar
+          </button>
 
     </div>
   );
